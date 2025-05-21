@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.clock-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 32px;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.clock-card span {
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .clock-card {
+        font-size: 60px;
+        padding: 30px 60px;
+    }
+
+    .clock-card span {
+        width: 60px;
+    }
+}
