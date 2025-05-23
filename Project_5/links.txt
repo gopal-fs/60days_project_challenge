@@ -1,0 +1,3 @@
+  url = `https://wa.me/?text=${msg}`;
+  url = `https://twitter.com/intent/tweet?text=${msg}`;
+  url = `https://t.me/share/url?url=&text=${msg}`;
