@@ -81,6 +81,7 @@ image.addEventListener("change", () => {
         const reader = new FileReader();
         reader.onload = function (e) {
             const imgUrl = e.target.result; 
+            
            
             final_upload.onclick = () => {
                 if (upload(imgUrl, pictureName.value)) {
@@ -89,13 +90,13 @@ image.addEventListener("change", () => {
                     setTimeout(() => {
                         success.style.display = "none";
                     }, 2000);
-                    // Reset input fields
                     pictureName.value = "";
                     image.value = "";
                 }
             };
         };
-        reader.readAsDataURL(file); 
+        reader.readAsDataURL(file);
+
     } else {
         alert("Please select a valid image file.");
     }
