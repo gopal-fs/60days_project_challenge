@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/05816d5682.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="top-bar">
+            <h1>Image Gallery</h1>
+            <div>
+                <button id="upload-btn">Upload Image</button>
+                <i  class="fa-solid fa-arrow-up"></i>
+            </div>
+            
+
+        </div>
+        <div class="images-container" id="images-container">
+            
+        </div>
+       
+        <div id="upload-card" class="upload-card">
+            <i id="close-card" class="fa-solid fa-xmark"></i>
+            <input id="pictureName" type="text" placeholder="Give a Beautiful Name For Your Picture" />
+            <div class="upload-img">
+                <input id="image" type="file" accept="image/png, image/jpeg, image/webp"  placeholder="Choose File" />
+            </div>
+            <button id="final-upload">Upload</button>
+        </div>
+        <p id="success" class="success">Image Uploaded Succesfully</p>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

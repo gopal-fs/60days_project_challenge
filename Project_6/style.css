@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 10vh;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+h1{
+    color: black;
+}
+
+.top-bar button{
+    height: 36px;
+    width: 138px;
+   padding-right: 5px;
+    border-width: 0px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #4070f4;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+
+}
+.fa-arrow-up{
+    position: absolute;
+    right: 25px;
+    top: 30px;
+   margin-right: 5px;
+   cursor: pointer;
+    color: #fff;
+
+}
+
+.upload-card{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: black;
+    padding: 30px;
+    width: 70%;
+}
+.upload-card input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    border-width: 0px;
+    margin-bottom: 20px;
+}
+.upload-card i{
+    align-self: flex-end;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.upload-img{
+    padding: 20px;
+    border: 1px dashed white;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-img input{
+    padding: 20px;
+    border: 2px solid white;
+    width: 50%;
+
+
+}
+.upload-card button{
+    height: 36px;
+    width: 138px;
+   padding-right: 5px;
+    border-width: 0px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #4070f4;
+    border-radius: 12px;
+    margin-top: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.success{
+    width: max-content;
+    padding: 18px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: 	#22bb33;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+img {
+    height: 200px;
+    width: 100%;
+    max-width:300px;
+    border-radius: 12px;
+    display: block; /* ✅ removes inline spacing issues */
+}
+
+@media(min-width:768px){
+    .images-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    img{
+        width: 300px;
+        gap: 20px;
+    }
+}
