@@ -31,7 +31,6 @@ let image = document.getElementById("image");
 let pictureName = document.getElementById("pictureName");
 let images_container = document.getElementById("images-container");
 
-
 function renderImages() {
     images_container.innerHTML = ""; 
     for (let picture of demo_pictures) {
@@ -40,8 +39,6 @@ function renderImages() {
         images_container.appendChild(imgElement);
     }
 }
-
-
 renderImages();
 
 upload_btn.addEventListener("click", () => {
