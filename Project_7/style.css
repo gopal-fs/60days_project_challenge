@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+
+.signin{
+    background-color: #fff;
+    display: flex;
+}
+.signincard{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.signincard p{
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslategrey;
+}
+.social-buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+i{
+    border-radius: 50%;
+    background-color: aqua;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+input{
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ECEBDE ;
+    color: black;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+a{
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.signincard button{
+    height: 36px;
+    width: 120px;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    background-color: 	#22bb33;
+}
+
+.toggle-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 61.3%;
+    width: 50%;
+    background: linear-gradient(to right,#6D6027,#D3CBB8);
+    height: 100vh;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    border-top-left-radius: 130px;
+    border-bottom-left-radius: 130px;
+    padding: 10px;
+    transform: translate(0px);
+    animation: slideIn 1s ease-in-out forwards ;
+    animation-play-state: running;
+}
+@keyframes slideIn {
+    to{
+        transform: translateX(-180px);
+    }
+    
+}
+
+.toggle-card h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.toggle-card p{
+    text-align: center;
+    font-size: 30px;
+}
+.toggle-card button{
+    border: 2px solid  #e1eec3;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    height: 36px;
+    width: 120px;
+    margin-top: 20px;
+    background-color: transparent;
+}
