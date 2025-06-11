@@ -68,6 +68,13 @@ calcBtn.addEventListener("click",function(){
         Tip=calculate_tip(totalbill,People);
         document.getElementById('paynow').addEventListener("click",function(){
             alert("Amount Paid Successfully!")
+            people.value="";
+            totalBill.value="";
+            tip.value="";
+            result.style.display='none';
+            document.getElementById('paynow').style.display="none";
+            calcBtn.style.display='block';
+
         })
 
     }
