@@ -5,6 +5,13 @@ let images=[
     'https://cdn1.iconfinder.com/data/icons/weather-429/64/weather_icons_color-02-512.png',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ryPCbi-yYVssSMiQdO15Gj-Rh23xDJUXL6gGP7XnWdUDpzCPhQinClmZZHfdrJk_h4s&usqp=CAU'
 ]
+let cityName=document.getElementById("cityName");
+let place=document.getElementById("place");
+let temperature=document.getElementById("temperature");
+let humidity=document.getElementById("humidity");
+let wind=document.getElementById("wind");
+
+let city=null;
 
 function call(){
     if(cityName.value===""){
@@ -49,25 +56,11 @@ function call(){
 }
 
 }
-
-let cityName=document.getElementById("cityName");
-let place=document.getElementById("place");
-let temperature=document.getElementById("temperature");
-let humidity=document.getElementById("humidity");
-let wind=document.getElementById("wind");
-
-let city=null;
 cityName.addEventListener("keydown",function(event){
     if(event.key==='Enter'){
-        call();
-        
-
-        
-        
+        call(); 
     }
-    
 })
-
 let icon=document.getElementById("icon");
 icon.onclick=function(){
     call();
