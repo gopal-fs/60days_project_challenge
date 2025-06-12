@@ -10,7 +10,6 @@ let option2=document.createElement('li');
 let option3=document.createElement('li');
 let option4=document.createElement('li');
 
-
 let questions = [
     {
         question: "What is the National Bird of India?",
@@ -54,9 +53,6 @@ let questions = [
     }
 ];
 
-
-
-
 let count=0;
 let Score=0;
 let click=false;
@@ -96,8 +92,6 @@ function loadQuestion(){
     });
 
 }
-
-
 function updateQuestion(count){
     [option1, option2, option3, option4].forEach(opt => opt.style.backgroundColor = '');
     Question.textContent=questions[count].question;
@@ -126,11 +120,6 @@ function updateQuestion(count){
 
 
 }
-
-
-
-
-
 nextBtn.addEventListener("click",function(){
     count++;
     if (count<questions.length){
@@ -140,8 +129,6 @@ nextBtn.addEventListener("click",function(){
         updateQuestion(count);
     }
     else{
-
-        
         modal.style.display='block';
         result.textContent=`Your Score is : ${Score}`;
         if(Score<10){
@@ -158,10 +145,6 @@ nextBtn.addEventListener("click",function(){
 
         loadQuestion();
     }
-
-
-
 })
-
 
 loadQuestion();
