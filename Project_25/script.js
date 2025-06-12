@@ -131,18 +131,12 @@ function updateQuestion(count){
 
 
 
-
-
-
 nextBtn.addEventListener("click",function(){
     count++;
-
-    
     if (count<questions.length){
         if(count===3){
             nextBtn.textContent='Submit';
         }
-        
         updateQuestion(count);
     }
     else{
