@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+.bg-container{
+    background-color: blueviolet;
+    height: 100vh;
+    display: flex;
+    padding-left: 100px ;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bg-container h1{
+    color: white;
+    font-weight: 400;
+}
+
+.bg-container p{
+    color: aqua;
+    font-size: 30px;
+    margin-top: 10px;
+    border-bottom: 2px solid aqua;
+    width: max-content;
+   
+}
+
+.password {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.password input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.password i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.button{
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.button button{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.modal p{
+    position: fixed;
+    top: 50%;
+    display: none;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    padding: 12px;
+    background-color: #198754;
+    font-size: 14px;
+    width: 50%;
+    max-width: 25%;
+    border-radius: 8px;
+    z-index: 1;
+}
