@@ -1,18 +1,13 @@
 let createBtn=document.querySelector(".btn");
 let notesContainer=document.querySelector(".notes-container");
 let notes=document.querySelector(".input-box");
-
 function showNotes(){
     notesContainer.innerHTML=localStorage.getItem("notes");
 }
-
 showNotes();
-
 function updateStorage(){
     localStorage.setItem("notes",notesContainer.innerHTML);
 }
-
-
 createBtn.addEventListener("click",function(){
     let inputBox=document.createElement('div');
     inputBox.classList.add('input-box');
@@ -25,7 +20,6 @@ createBtn.addEventListener("click",function(){
     notesContainer.appendChild(inputBox);
 
 })
-
 notesContainer.addEventListener("click", function (e) {
     if (e.target.tagName === "I") {
         e.target.parentElement.remove();
