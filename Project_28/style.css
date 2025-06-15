@@ -61,8 +61,6 @@ nav .circle{
     color: #333;
     margin-top: 5px;
 }
-
-
 #progress{
     -webkit-appearance: none;
     width: 100%;
@@ -99,7 +97,6 @@ nav .circle{
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(255,26,26,0.22);
 }
-
 .controls div:nth-child(2){
     transform: scale(1.5);
     background-color: #f53192;
