@@ -1,7 +1,6 @@
 let speech= new SpeechSynthesisUtterance();
 let content=document.getElementById("content");
 let voices=[];
-
 const voiceSelect = document.querySelector("select");
 
 window.speechSynthesis.onvoiceschanged = () => {
@@ -15,6 +14,7 @@ window.speechSynthesis.onvoiceschanged = () => {
         voiceSelect.add(option);
     });
 };
+
 voiceSelect.addEventListener("change",()=>{
     speech.voice=voices[voiceSelect.value];
 })
