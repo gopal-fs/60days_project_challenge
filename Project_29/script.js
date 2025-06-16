@@ -15,8 +15,6 @@ window.speechSynthesis.onvoiceschanged = () => {
         voiceSelect.add(option);
     });
 };
-
-
 voiceSelect.addEventListener("change",()=>{
     speech.voice=voices[voiceSelect.value];
 })
