@@ -124,7 +124,6 @@ function validateData() {
     return true;
 }
 
-
 function showFirstPage(){
     document.querySelector(".project-selection").style.display = "block";
     document.querySelector(".task-card").style.display = "none";

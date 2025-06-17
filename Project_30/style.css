@@ -49,7 +49,6 @@ body{
     overflow-y: scroll;
     scrollbar-width: none;
 }
-
 .task-name{
     margin-top: 10px;
     width: 80%;
