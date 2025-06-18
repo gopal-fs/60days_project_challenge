@@ -15,9 +15,6 @@ let selectedTaskId=null;
 let storeRespectiveTaskData=[];
 let storedTaskData=localStorage.getItem("tasks_data");
 storeRespectiveTaskData=storedTaskData && storedTaskData !== "undefined"?JSON.parse(storedTaskData):[];
-
-
-
 if(task_content.length>0){
     for(let head of tasks){
         let task_name=document.createElement('div');
@@ -34,10 +31,6 @@ if(task_content.length>0){
 else{
     showFirstPage();
 }
-
-
-
-
 cancelBtn.onclick = function () {
     showFirstPage();
     
@@ -182,7 +175,6 @@ addTaskBtn.onclick=function(){
     }
 
 }
-
 function validateData() {
     if (title.value === "" || desc.value === "" || time.value === "") {
         alert("Please Enter Valid Details!");
@@ -214,7 +206,6 @@ function handleSidebarDisplay() {
         document.querySelector(".side-bar").style.display = "none";
     }
 }
-
 document.addEventListener("DOMContentLoaded", handleSidebarDisplay);
 window.addEventListener("resize", handleSidebarDisplay);
 

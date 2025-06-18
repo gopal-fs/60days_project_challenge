@@ -212,7 +212,6 @@ label{
 .tasks-container p{
     color: white;
     font-size: 20px;
-
 }
 .tasks-container button{
     padding: 8px;
@@ -220,7 +219,6 @@ label{
     border: 0;
     width: 120px;
     border-radius: 12px;
-
 }
 .top-bar{
     display: none;
