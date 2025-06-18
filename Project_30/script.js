@@ -196,11 +196,9 @@ function showFirstPage(){
     document.querySelector(".task-card").style.display = "none";
     document.querySelector(".project-card").style.display="none";
 }
-
 document.querySelector(".fa-bars").onclick=function(){
     document.querySelector(".side-bar").style.display="block"
 }
-
 document.addEventListener("click", function (event) {
     const sidebar = document.querySelector(".side-bar");
     const barIcon = document.querySelector(".fa-bars");

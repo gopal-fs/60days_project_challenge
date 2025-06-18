@@ -67,11 +67,8 @@ body{
 }
 .task-name:hover{
     
-    background-color: rgba(255,255,255,0.1);
-  
-    
+    background-color: rgba(255,255,255,0.1); 
 }
-
 .main-content{
     background: #efefef;
     height: 100vh;
