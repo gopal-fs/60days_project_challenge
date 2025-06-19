@@ -19,12 +19,10 @@ h1{
     font-size: 50px;
     color: #fff;
 }
-
 .bg-container h1:nth-child(2){
     color: #ffff76;
     margin-top: 10px;
 }
-
 .input-box{
     margin-top: 20px;
     display: flex;

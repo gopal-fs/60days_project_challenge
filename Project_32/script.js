@@ -18,9 +18,7 @@ function calculate(){
     let d2=present_date.getDate();
     let m2=present_date.getMonth()+1;
     let y2=present_date.getFullYear();
-
     let d3,m3,y3;
-
     y3=y2-y1;
     
     if(m2>=m1){
@@ -37,8 +35,6 @@ function calculate(){
     else{
         m3--;
         d3 = getDaysInMonth(y1, m1) + d2 - d1;
-
-
     }
 
     if(m3<0){
@@ -48,7 +44,6 @@ function calculate(){
     days.textContent=d3;
     months.textContent=m3;
     years.textContent=y3;
-
 }
 function getDaysInMonth(year,month){
     return new Date(year,month,0).getDate();
