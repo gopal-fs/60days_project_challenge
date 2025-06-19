@@ -45,13 +45,11 @@ function calculate(){
         m3=11;
         y3--;
     }
-    
     days.textContent=d3;
     months.textContent=m3;
     years.textContent=y3;
 
 }
-
 function getDaysInMonth(year,month){
     return new Date(year,month,0).getDate();
 }
