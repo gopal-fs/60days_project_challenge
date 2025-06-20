@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(45deg,#1d0000,#20205b);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calendar-card{
+    display: flex;
+    border-radius: 12px;
+    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid black;
+    box-shadow: 4px 10px 12px rgba(0,0,0,0.5);
+    
+
+}
+
+.first-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    background-color: #fff;
+    color: black;
+    font-weight: 400;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+}
+.second-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 35%;
+    background-color: red;
+    color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#date{
+    font-size: 180px;
+}
+#day{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+   
+}
+
+
+#month{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#year{
+    font-size: 30px;
+}
+
+.cal{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    
+}
+span{
+    color: red;
+}
