@@ -71,12 +71,10 @@ body{
 #year{
     font-size: 30px;
 }
-
 .cal{
     text-align: center;
     margin-top: 30px;
     color: white;
-    
 }
 span{
     color: red;
