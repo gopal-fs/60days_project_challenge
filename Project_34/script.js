@@ -1,8 +1,7 @@
 
 let search=document.getElementById("search");
-let page=1
+let page=1;
 async function appendImages(){
-    
     let search_query=search.value;
     if(search_query===""){
         return alert("Please Do Valid Search!")

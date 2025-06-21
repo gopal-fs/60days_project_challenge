@@ -64,14 +64,12 @@ flex-direction: column;
     font-weight: 500;
     cursor: pointer;
 }
-
 .images-container{
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .image{
     width: 100%;
     max-width: 300px;
