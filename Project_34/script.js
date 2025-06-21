@@ -9,7 +9,6 @@ async function appendImages(){
     }
     let url=`https://api.unsplash.com/search/photos?page=${page}&query=${search_query}&client_id=nujf2As-KGTk-N1IQqNccxvWVp7x_aKizqt0IHeUfk8`
     document.querySelector(".images-container").innerHTML="";
-    
     fetch(url)
     .then((response)=>{
         return response.json();
@@ -26,7 +25,6 @@ async function appendImages(){
     }).catch((error)=>{
         console.log(error)
     })
-
 }
 search.addEventListener("keydown",(e)=>{
    if(e.key==="Enter") appendImages();
