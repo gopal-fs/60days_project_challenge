@@ -13,11 +13,16 @@ body{
     align-items: center;
     text-align: center;
     background-color: black;
-    height: 100vh;
+    
+}
+.cat-image{
+    height: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .image{
-    height: 60vh;
+    height: 30vh;
     width: 100%;
     max-width: 250px;
 }
