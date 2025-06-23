@@ -1,6 +1,5 @@
 let qrcode=document.getElementById("qrcode");
 let search_text=document.querySelector(".form-control")
-
 function generateQRCode(){
     let value=search_text.value;
     if(value==="") return alert("Please Enter Valid Text Or Url")
