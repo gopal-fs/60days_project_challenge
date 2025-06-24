@@ -12,11 +12,9 @@ const winConditons=[
     [2,4,6],
 
 ]
-
 let running=false;
 let currentPlayer="X"
 let options=["","","","","","","","",""]
-
 
 initializeGame();
 
