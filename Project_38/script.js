@@ -1,8 +1,7 @@
 let stars=document.querySelectorAll(".star")
 let result=document.getElementById("result")
-
-onCodeLoad();
 let rated=false;
+
 
 function onCodeLoad(){
     stars.forEach((star)=>{
@@ -14,8 +13,6 @@ function onCodeLoad(){
     })
 
 }
-
-
 function receiveRating(index){
     
     
@@ -70,3 +67,5 @@ document.querySelector("button").addEventListener("click",function(){
         })
     alert("Feedback Submitted Succesfully!")
 })
+
+onCodeLoad();
