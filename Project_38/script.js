@@ -55,10 +55,8 @@ function receiveRating(index){
             break;
 
     }
-    
 
 }
-
 document.querySelector("button").addEventListener("click",function(){
 
     if(!rated) return alert("Please Rate Our Service")
