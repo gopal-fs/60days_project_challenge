@@ -14,8 +14,6 @@ function onCodeLoad(){
 
 }
 function receiveRating(index){
-    
-    
     stars.forEach(star=>{
         const para=Number(star.querySelector('p').textContent)
         if(para<=index+1){
@@ -52,7 +50,6 @@ function receiveRating(index){
             break;
 
     }
-
 }
 document.querySelector("button").addEventListener("click",function(){
 
