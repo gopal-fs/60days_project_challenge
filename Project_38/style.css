@@ -48,7 +48,6 @@ body{
     color: #ffffff;
     font-family: cursive;
 }
-
 .card{
     position: absolute;
     top: 50%;
@@ -69,7 +68,6 @@ body{
     text-align: center;
    
 }
-
 .card h1{
     font-family: "Roboto";
     font-weight: 400;
