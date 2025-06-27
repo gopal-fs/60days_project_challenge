@@ -12,7 +12,6 @@ body{
 .container{
     position: relative;
 }
-
 .top-section{
     height: 50vh;
     width: 100%;
@@ -24,13 +23,11 @@ body{
     align-items: flex-end;
     color: #ffffff;
 }
-
 .top-section h1{
     color: #ffffff;
     font-family: cursive;
     
 }
-
 .bottom-section{
     background-color: #ffffff;
     height: 50vh;
