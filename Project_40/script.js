@@ -28,8 +28,7 @@ function conductGame(userChoice) {
     }
 
     score.textContent = `Score : ${Score}`;
-
-    // Hide card and show icons again after 2 seconds
+    
     setTimeout(function () {
         document.querySelector(".card").style.display = "none";
         document.querySelector(".game-icons").style.display = "flex";
