@@ -11,8 +11,6 @@ function conductGame(userChoice) {
     let generateRandom = Math.floor(Math.random() * 3);
     userclick.textContent = choices[index];
     randomclick.textContent = choices[generateRandom];
-
-    // Show result card BEFORE any return
     document.querySelector(".card").style.display = "flex";
 
     if (choices[index] === choices[generateRandom]) {
