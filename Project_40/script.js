@@ -4,7 +4,6 @@ let result = document.getElementById("result");
 let score = document.getElementById("score");
 
 let Score = 0;
-
 function conductGame(userChoice) {
     let index = Number(userChoice);
     let choices = ["Rock", "Paper", "Scissor"];
@@ -28,7 +27,7 @@ function conductGame(userChoice) {
     }
 
     score.textContent = `Score : ${Score}`;
-    
+
     setTimeout(function () {
         document.querySelector(".card").style.display = "none";
         document.querySelector(".game-icons").style.display = "flex";
@@ -38,7 +37,7 @@ function conductGame(userChoice) {
 function startGame() {
     document.querySelectorAll(".icons").forEach(icon => {
         icon.addEventListener("click", function () {
-            const index = this.getAttribute("data-index"); // ✅ correct attribute
+            const index = this.getAttribute("data-index");
             document.querySelector(".game-icons").style.display = "none";
             conductGame(index);
         });
