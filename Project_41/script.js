@@ -1,7 +1,7 @@
 const navItems = document.querySelectorAll(".nav-item");
-const underline = document.querySelector(".underline");  // Corrected variable
+const underline = document.querySelector(".underline"); 
 
-// ✅ Main function that moves the underline
+
 function updateUnderline(el) {
     const rect = el.getBoundingClientRect();
     const navRect = el.parentElement.getBoundingClientRect();
@@ -9,16 +9,16 @@ function updateUnderline(el) {
     underline.style.left = `${rect.left - navRect.left}px`;
 }
 
-// ✅ Loop through all nav items and add click handler
+
 navItems.forEach((item, index) => {
     item.onclick = function () {
-        navItems.forEach(i => i.classList.remove('active')); // ✅ Fixed forEach syntax
+        navItems.forEach(i => i.classList.remove('active')); 
         item.classList.add('active');
-        updateUnderline(item); // ✅ Correct function name
+        updateUnderline(item); 
     }
 });
 
-// ✅ On page load, position underline under the active one
+
 function first() {
     const active = document.querySelector('.nav-item.active');
     updateUnderline(active);
@@ -26,6 +26,6 @@ function first() {
 first();
 
 AOS.init({
-    duration: 1000, // animation duration (in ms)
-    once: true      // animate only once on scroll
+    duration: 1000,
+    once: true      
   });
