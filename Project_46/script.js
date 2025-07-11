@@ -6,8 +6,6 @@ let wordIndex=0
 let charIndex=0
 let isDeleting=false
 
-
-
 button.onclick=function(){
     document.querySelector('.toast-container').style.display='block'
    
@@ -18,8 +16,6 @@ button.onclick=function(){
 
     },2200)
 }
-
-
 function Typer(){
     const currentWord= roles[wordIndex]
     const letter=currentWord.substring(0,charIndex)
