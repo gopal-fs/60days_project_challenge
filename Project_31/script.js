@@ -33,6 +33,6 @@ function showToast(msg){
 
     setTimeout(function(){
         toast.remove();
-    },4000)
+    },1000)
 
 }
