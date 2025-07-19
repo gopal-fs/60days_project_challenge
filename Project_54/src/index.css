@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins','sans-serif';
+}
+
+body{
+  
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+a.active{
+  color: yellow;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: blue;
+  height: 8vh;
+ 
+
+ 
+}
+
+.btn{
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 36px;
+  width: 120px;
+  border-width: 0px;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #fff;
+  background-color: black; 
+}
+
+.container{
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-details{
+  display: flex;
+  margin-top: 20px;
+}
+
+.details{
+  background-color: black;
+  color: white;
+  margin-right: 20px;
+  padding: 20px;
+}

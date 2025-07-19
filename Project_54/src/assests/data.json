@@ -1,0 +1,40 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Frontend Developer",
+        "company": "TechNova Pvt Ltd",
+        "description": "Build and maintain user interfaces using React and modern web technologies.",
+        "salary": "₹8,00,000 - ₹12,00,000 per annum"
+      },
+      {
+        "id": 2,
+        "title": "Backend Developer",
+        "company": "CodeCraft Solutions",
+        "description": "Design and implement scalable APIs and backend services using Node.js and Express.",
+        "salary": "₹10,00,000 - ₹14,00,000 per annum"
+      },
+      {
+        "id": 3,
+        "title": "Data Analyst",
+        "company": "Insight Analytics",
+        "description": "Analyze large datasets to extract meaningful insights and present them using visualization tools.",
+        "salary": "₹6,50,000 - ₹10,00,000 per annum"
+      },
+      {
+        "id": 4,
+        "title": "Machine Learning Engineer",
+        "company": "AI Matrix Inc",
+        "description": "Develop and deploy machine learning models for real-time applications.",
+        "salary": "₹12,00,000 - ₹18,00,000 per annum"
+      },
+      {
+        "id": 5,
+        "title": "DevOps Engineer",
+        "company": "CloudSphere Technologies",
+        "description": "Automate infrastructure and CI/CD pipelines to improve deployment efficiency.",
+        "salary": "₹9,00,000 - ₹13,00,000 per annum"
+      }
+    ]
+  }
+  
