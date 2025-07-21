@@ -13,9 +13,6 @@ const App = () => {
   useEffect(()=>{
     console.log('Use Effect Rendered!')
 
-
-    
-
   },[number])
 
   const updateRef=()=>{
