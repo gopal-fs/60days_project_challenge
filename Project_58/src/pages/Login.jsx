@@ -16,6 +16,8 @@ const Login = () => {
       navigate('/private');
     } catch (err) {
       alert(err.message);
+
+      
     }
   };
 
