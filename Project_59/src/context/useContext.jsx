@@ -10,6 +10,9 @@ const AuthState= (({children})=>{
     useEffect(()=>{
         const unsubscribe=onAuthStateChanged(auth,(currentUser)=>{
             setUser(currentUser)
+
+
+            
         })
         return ()=>unsubscribe()
     },[])
