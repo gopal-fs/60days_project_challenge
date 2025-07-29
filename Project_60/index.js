@@ -11,24 +11,18 @@ const chatRoom= new EventEmitter()
 chatRoom.once('joined',()=>{
     console.log('Hello My Boy Welcome')
 })
-
-
 chatRoom.once('joined',()=>{
     console.log('Hello My Boy Welcome here')
 })
-
 chatRoom.prependOnceListener('joined',(name)=>{
     console.log(`Hello ${name} Welcome to Vs Code!`)
 })
-
 chatRoom.on('onSentMessage',(message,name)=>{
     console.log(`${name} sent you ${message}`)
 })
-
 chatRoom.on('onRaisedHand',(name)=>{
     console.log(`${name} Raised Hand!`)
 })
-
 chatRoom.on('onLeftChat',(name)=>{
     console.log(`${name} Left the Chat!`)
 })
