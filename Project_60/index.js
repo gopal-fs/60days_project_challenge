@@ -1,8 +1,6 @@
 const { log } = require('console')
 const EventEmitter=require('events')
 const chatRoom= new EventEmitter()
-
-
 /*
 -show joined message 
 -show person sent a message
