@@ -28,8 +28,6 @@ chatRoom.on('onLeftChat',(name)=>{
 })
 
 
-
-
 chatRoom.emit('joined','Gopal')
 chatRoom.emit('onSentMessage','Bro Pichikki Poindi Bro Message.','Gopal')
 chatRoom.emit('onRaisedHand','Gopal')
