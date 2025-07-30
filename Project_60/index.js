@@ -22,9 +22,6 @@ chatRoom.on('onSentMessage',(message,name)=>{
 })
 chatRoom.on('onRaisedHand',(name)=>{
     console.log(`${name} Raised Hand!`)
-
-
-    
 })
 chatRoom.on('onLeftChat',(name)=>{
     console.log(`${name} Left the Chat!`)
