@@ -3,9 +3,6 @@ const path = require('path')
 const http=require('http')
 const fs=require('fs')
 
-
-
-
 //OS Module
 console.log(os.type())
 console.log(os.version())
