@@ -8,17 +8,14 @@ console.log(os.type())
 console.log(os.version())
 console.log(os.freemem())
 
-
 //Getting The current working directory 
 console.log(__dirname)
 
 //Getting the current working filename Directory 
 console.log(__filename)
 
-
 //Another  Getting Directory 
 console.log(path.dirname(__filename))
-
 
 //Getting only Current Filename
 console.log(path.basename(__filename))
@@ -29,9 +26,7 @@ console.log(path.extname(__filename))
 //Getting All Path Data in Json Format 
 console.log(path.parse(__filename))
 
-
 //FS Module- CRUD Operations
-
 //Creating a file
 fs.writeFile('demo.text','Hey This is a Demo File',(err,data)=>{
     if(err){
@@ -71,17 +66,14 @@ fs.unlink('sample.txt',(err,res)=>{
     }
 })
 
+//Checking is File exists
 if(fs.existsSync('sample.txt')){
     console.log('True')
 }
-
-
-
 
 //HTTP Module 
 const server=http.createServer((req,res)=>{
     res.write('Hello Today I learned Built in Modules')
     res.end()
 })
-
 server.listen(3000)
