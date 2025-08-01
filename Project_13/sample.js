@@ -66,7 +66,10 @@ fs.unlink('sample.txt',(err,res)=>{
     }
 
 
+
+
     
+
 })
 
 //Checking is File exists
