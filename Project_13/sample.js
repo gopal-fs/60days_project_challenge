@@ -64,6 +64,9 @@ fs.unlink('sample.txt',(err,res)=>{
         console.log('File Deleted Succesfully')
 
     }
+
+
+    
 })
 
 //Checking is File exists
