@@ -55,7 +55,6 @@ app.get('/dashboard', (req, res) => {
     res.send('Unauthorized');
   }
 });
-
 // Logout Route
 app.get('/logout', (req, res) => {
   req.session.destroy(err => {
@@ -64,7 +63,7 @@ app.get('/logout', (req, res) => {
   });
 
 
-  
+
 });
 
 // MongoDB Connection
