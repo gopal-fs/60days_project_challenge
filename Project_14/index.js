@@ -62,6 +62,9 @@ app.get('/logout', (req, res) => {
     if (err) throw err;
     res.send('Logged out');
   });
+
+
+  
 });
 
 // MongoDB Connection
