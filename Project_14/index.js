@@ -63,7 +63,6 @@ app.get('/logout', (req, res) => {
   });
 
 
-
 });
 
 // MongoDB Connection
