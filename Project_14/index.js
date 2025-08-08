@@ -32,6 +32,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: store,
+
+
+  
 }));
 
 // Simple in-memory user (for demo only)
