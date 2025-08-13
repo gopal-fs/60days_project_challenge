@@ -12,6 +12,8 @@ app.use(express.json());
 
 
 
+
+
 const corsOptions = {
     origin: 'http://127.0.0.1:5500', // or '*' to allow all
     methods: ['GET', 'POST', 'OPTIONS'],
