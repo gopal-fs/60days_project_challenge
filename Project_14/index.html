@@ -157,10 +157,12 @@
       const res = await fetch('http://localhost:3000/logout'  , {
 
 
-      
+
         credentials: 'include'
       });
       const text = await res.text();
+
+      
       responseText.innerText = text;
     }
   </script>
