@@ -9,7 +9,7 @@ body {
     height: 100vh;
   }
 
-  /* Fullscreen preview image */
+  
   .preview {
     width: 100%;
     max-height: 80vh;
@@ -20,7 +20,7 @@ body {
     transition: 0.3s;
   }
 
-  /* Slider container */
+ 
   .slider {
     display: flex;
     gap: 10px;
