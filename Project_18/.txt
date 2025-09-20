@@ -117,7 +117,7 @@ WHERE salary IN (
 );
 
 -- Q17: Earliest hire in HR
-SELECT *
+SELECT emp_id,name,department
 FROM employee
 WHERE department = 'HR'
 ORDER BY hire_date ASC
