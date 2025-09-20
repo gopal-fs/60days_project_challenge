@@ -1,0 +1,124 @@
+
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    hire_date DATE,
+    manager_id INT,
+    location VARCHAR(50)
+);
+
+INSERT INTO employee VALUES
+(1, 'Ravi', 'HR', 40000, '2020-01-15', NULL, 'Hyderabad'),
+(2, 'Anjali', 'Finance', 55000, '2019-03-20', 1, 'Bangalore'),
+(3, 'Suresh', 'IT', 70000, '2018-07-10', 1, 'Hyderabad'),
+(4, 'Priya', 'Finance', 60000, '2021-05-22', 2, 'Mumbai'),
+(5, 'Kiran', 'IT', 80000, '2020-08-12', 3, 'Hyderabad'),
+(6, 'Neha', 'HR', 45000, '2019-09-25', 1, 'Delhi'),
+(7, 'Arjun', 'Sales', 50000, '2021-11-14', NULL, 'Chennai'),
+(8, 'Divya', 'IT', 75000, '2017-04-19', 3, 'Hyderabad'),
+(9, 'Rohit', 'Sales', 52000, '2019-06-30', 7, 'Chennai'),
+(10, 'Meena', 'Finance', 58000, '2018-12-05', 2, 'Bangalore'),
+(11, 'Varun', 'IT', 90000, '2022-01-10', 3, 'Hyderabad'),
+(12, 'Sneha', 'HR', 42000, '2021-03-18', 1, 'Delhi'),
+(13, 'Ajay', 'Sales', 48000, '2020-07-27', 7, 'Chennai'),
+(14, 'Kavya', 'Finance', 61000, '2019-10-09', 2, 'Mumbai'),
+(15, 'Nikhil', 'IT', 82000, '2020-05-14', 3, 'Hyderabad'),
+(16, 'Shreya', 'Sales', 47000, '2022-02-11', 7, 'Chennai'),
+(17, 'Harish', 'Finance', 64000, '2017-08-22', 2, 'Bangalore'),
+(18, 'Pooja', 'IT', 78000, '2019-04-17', 3, 'Hyderabad'),
+(19, 'Manoj', 'HR', 43000, '2020-06-29', 1, 'Delhi'),
+(20, 'Lakshmi', 'Sales', 51000, '2018-02-23', 7, 'Chennai'),
+(21, 'Ramesh', 'IT', 87000, '2021-09-05', 3, 'Hyderabad');
+
+
+
+-- Q1: Display all employees working in IT department
+SELECT * FROM employee WHERE department = 'IT';
+
+-- Q2: Find employees working in Hyderabad
+SELECT * FROM employee WHERE location = 'Hyderabad';
+
+-- Q3: Retrieve employee names hired after 2020
+SELECT * FROM employee
+WHERE CAST(strftime('%Y', hire_date) AS INTEGER) > 2020;
+
+-- Q4: Employees with salary between 50,000 and 80,000
+SELECT * FROM employee WHERE salary BETWEEN 50000 AND 80000;
+
+-- Q5: Employees with no manager
+SELECT * FROM employee WHERE manager_id IS NULL;
+
+-- Q6: Average salary of employees
+SELECT ROUND(AVG(salary), 0) FROM employee;
+
+-- Q7: Max salary in Finance department
+SELECT MAX(salary) FROM employee WHERE department = 'Finance';
+
+-- Q8: Count employees by location
+SELECT location, COUNT(*) AS no_of_people
+FROM employee GROUP BY location;
+
+-- Q9: Total salary by department
+SELECT department, SUM(salary)
+FROM employee GROUP BY department;
+
+-- Q10: Department with highest number of employees
+SELECT department, COUNT(*) AS total
+FROM employee
+GROUP BY department
+ORDER BY total DESC
+LIMIT 1;
+
+-- Q11: Departments with average salary > 60000
+SELECT department, ROUND(AVG(salary),0) AS avg_salary
+FROM employee
+GROUP BY department
+HAVING avg_salary > 60000;
+
+-- Q12: Locations with more than 3 employees
+SELECT location, COUNT(*) AS cnt
+FROM employee
+GROUP BY location
+HAVING cnt > 3;
+
+-- Q13: Manager of emp_id = 3
+SELECT manager_id FROM employee WHERE emp_id = 3;
+
+-- Q14: Employees earning more than avg salary
+SELECT emp_id, name
+FROM employee
+WHERE salary > (SELECT ROUND(AVG(salary),0) FROM employee);
+
+-- Q15: Employee with 2nd highest salary
+SELECT *
+FROM employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+-- (Distinct version)
+SELECT *
+FROM employee
+WHERE salary = (
+  SELECT DISTINCT salary
+  FROM employee
+  ORDER BY salary DESC
+  LIMIT 1 OFFSET 1
+);
+
+-- Q16: Employee with same salary as in Sales
+SELECT *
+FROM employee
+WHERE salary IN (
+  SELECT DISTINCT salary
+  FROM employee
+  WHERE department = 'Sales'
+);
+
+-- Q17: Earliest hire in HR
+SELECT *
+FROM employee
+WHERE department = 'HR'
+ORDER BY hire_date ASC
+LIMIT 1;
