@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dark / Light Theme Toggle</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Theme Toggle Demo</h1>
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="card">
+        <h2>Welcome</h2>
+        <p>
+          This is a simple demo of a Dark / Light theme toggle using CSS variables
+          and minimal JavaScript.
+        </p>
+        <div class="controls">
+          <label class="switch">
+            <input type="checkbox" id="prefers-animation" />
+            <span class="switch-slider"></span>
+            <span class="switch-label">Enable animations</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="cards-grid">
+        <article class="mini-card">
+          <h3>Card One</h3>
+          <p>Some sample content to show theme contrast.</p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Card Two</h3>
+          <p>Another piece of content. Look at colors and shadows.</p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Card Three</h3>
+          <p>Toggle the theme to see transitions and accessibility support.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  
+
+  <script src="script.js"></script>
 </body>
 </html>
