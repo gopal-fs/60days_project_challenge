@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="brand">AdminPanel</div>
+      <ul class="menu">
+        <li class="menu-item active" data-letter="D">Dashboard</li>
+        <li class="menu-item" data-letter="U">Users</li>
+        <li class="menu-item" data-letter="A">Analytics</li>
+        <li class="menu-item" data-letter="O">Orders</li>
+        <li class="menu-item" data-letter="S">Settings</li>
+      </ul>
+    </aside>
+    <div class="main-content">
+      <header class="topbar">
+        <div class="toggle-btn" id="toggle-btn">☰</div>
+        <div class="user-info">
+          <span>Admin</span>
+          <img src="https://via.placeholder.com/35" alt="avatar" class="avatar">
+        </div>
+      </header>
+      <section class="cards">
+        <div class="card">
+          <h3>Users</h3>
+          <p>1,245</p>
+        </div>
+        <div class="card">
+          <h3>Sales</h3>
+          <p>$5,678</p>
+        </div>
+        <div class="card">
+          <h3>Orders</h3>
+          <p>342</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>$12,345</p>
+        </div>
+      </section>
+      <section class="table-section">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1001</td>
+              <td>John Doe</td>
+              <td>2025-09-26</td>
+              <td>Shipped</td>
+              <td>$120</td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>Jane Smith</td>
+              <td>2025-09-25</td>
+              <td>Pending</td>
+              <td>$230</td>
+            </tr>
+            <tr>
+              <td>#1003</td>
+              <td>Mike Johnson</td>
+              <td>2025-09-24</td>
+              <td>Delivered</td>
+              <td>$99</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
