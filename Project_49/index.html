@@ -1,52 +1,17 @@
-<!-- payment.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pay Now</title>
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Hover Text Change</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h2>Painter Payment</h2>
-  <input type="number" id="amount" placeholder="Enter Amount" />
-  <button id="payBtn">Pay Now</button>
-
-  <script>
-    document.getElementById('payBtn').onclick = function () {
-      var amount = document.getElementById('amount').value;
-      if (!amount || amount <= 0) {
-        alert("Enter valid amount");
-        return;
-      }
-
-      var options = {
-        "key": "rzp_test_oclkqisPmvO1Nj", // Your Razorpay test Key
-        "amount": amount * 100, // In paise
-        "currency": "INR",
-        "name": "Painter Services",
-        "description": "Payment for Painting",
-
-        // ✅ SUCCESS handler
-        "handler": function (response) {
-          alert("✅ Payment successful!\nPayment ID: " + response.razorpay_payment_id);
-        },
-
-        // ❌ FAILURE handler
-        "modal": {
-          "ondismiss": function () {
-            alert("❌ Payment was unsuccessful or cancelled by user.");
-          }
-        },
-
-        "theme": {
-          "color": "#3399cc"
-        }
-      };
-
-      var rzp = new Razorpay(options);
-      rzp.open();
-    }
-  </script>
-
+  <div class="container">
+    <div class="card">
+      <p class="text" data-hover="Hello Gopal">Hello</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
