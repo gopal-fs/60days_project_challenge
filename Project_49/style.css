@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .card {
+    height: 400px;
+    width: 300px;
+    border-radius: 1rem;
+    box-shadow: 2px 0px 4px 8px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  
