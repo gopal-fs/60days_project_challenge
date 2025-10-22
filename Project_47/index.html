@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommendation UI</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-
-
 <body>
-    
+  <header>
+    <h1>Movie Recommendation</h1>
+    <input type="text" id="search" placeholder="Search for a movie..." />
+    <div class="filters">
+      <button class="filter-btn" data-genre="All">All</button>
+      <button class="filter-btn" data-genre="Action">Action</button>
+      <button class="filter-btn" data-genre="Comedy">Comedy</button>
+      <button class="filter-btn" data-genre="Romance">Romance</button>
+      <button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button>
+    </div>
+  </header>
+
+  <main id="movie-container"></main>
+
+ 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <img id="modal-poster" src="" alt="poster" />
+      <div class="modal-details">
+        <h2 id="modal-title"></h2>
+        <p id="modal-genre"></p>
+        <p id="modal-rating"></p>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
