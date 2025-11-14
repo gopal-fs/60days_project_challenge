@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-
-
 <body>
-    
-
-
-</body>
+    <div id="offline-banner" style="display:none; background:red; color:white; padding:10px; text-align:center;">
+      🚫 You are offline. Please check your internet connection.
+    </div>
+  
+    <script>
+      const banner = document.getElementById("offline-banner");
+  
+      function updateNetworkStatus() {
+        if (navigator.onLine) {
+          banner.style.display = "none";
+        } else {
+          banner.style.display = "block";
+        }
+      }
+  
+      window.addEventListener("online", updateNetworkStatus);
+      window.addEventListener("offline", updateNetworkStatus);
+  
+      // Check once when page loads
+      updateNetworkStatus();
+    </script>
 </html>
