@@ -1,184 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-  <meta charset="UTF-8">
-
-  
-  <title>Session Auth Demo</title>
-  <title>Session Auth Demo</title>
-  <title>Session Auth Demo</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page Practice</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Login</h1>
 
 
-
-
-
-
-
-  <p>s</p>
-
-
-
-  
-
-
-  
-  <form id="login-form">
-
-    
-
-
-    <label>Username:</label>
-
-    
-    <input type="text" name="username" required><br><br>
-
-
-    <label>Password:</label>
-
-
-    <input type="password" name="password" required><br><br>
-
-
-
-    <button type="submit">Login</button>
-  </form>
-
-  <hr>
-
-  <button onclick="getDashboard()">Visit Dashboard</button>
-  <button onclick="logout()">Logout</button>
-
-  <h3 id="response"></h3>
-
-  <script>
-    const form = document.getElementById('login-form');
-    const responseText = document.getElementById('response');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const data = {
-        username: formData.get('username'),
-
-        
-
-
-        password: formData.get('password')
-      };
-
-      const res = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data),
-        credentials: 'include'  // <-- Important to send/receive cookies
-      });
-
-      const text = await res.text();
-      responseText.innerText = text;
-    });
-
-    async function getDashboard() {
-
-
-      
-
-      const res = await fetch('http://localhost:3000/dashboard', {
-
-        
-
-
-
-        credentials: 'include'
-
-
-
-
-
-
-
-
-      });
-      const text = await res.text();
-
-
-      responseText.innerText = text;
-
-      
-
-
-
-
-
-
-
-
-    }
-
-    async function logout()    {
-
-
-
-
-
-      
-
-    console.log('hello')
-
-
-    
-
-
-
-
-      const res = await fetch('http://localhost:3000/logout'  , {
-
-
-
-        credentials: 'include'
-      });
-      const text = await res.text();
-
-
-      responseText.innerText = text;
-
-
-
-      
-    }
-  </script>
-
-
-
+  <section class="section hero">
+    <div class="container">
+      <h1 class="head">Build Better Web Experiences</h1>
+      <p class="para">Practice HTML, CSS & JavaScript on a clean landing page layout.</p>
+      <div class="buttons">
+        <button class="btn primary">Get Started</button>
+        <button class="btn secondary">View Docs</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section features">
+    <div class="container">
+      <h2>What You Can Practice</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Scroll Animations</h3>
+          <p>Reveal sections, text, and cards while scrolling.</p>
+        </div>
+        <div class="card rotate">
+          <h3>Hover Effects</h3>
+          <p>Buttons, cards, images, and interactive UI effects.</p>
+        </div>
+        <div class="card">
+          <h3>JavaScript Logic</h3>
+          <p>IntersectionObserver, counters, sliders, themes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section content">
+    <div class="container split">
+      <div class="text">
+        <h2>Clean Layout. Real Practice.</h2>
+        <p>
+          This layout is intentionally simple.  
+          Add your own animations using CSS, JavaScript, or animation libraries.
+        </p>
+        <p>
+          Ideal for scroll effects, parallax, text reveals, and page transitions.
+        </p>
+      </div>
+      <div class="image-box">
+        <div class="placeholder">Image / Graphic</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section cta">
+    <div class="container center">
+      <h2>Ready to Animate?</h2>
+      <p>Use this landing page as your animation playground.</p>
+      <button class="btn dark bt">Start Practicing</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
-
-
-
-
-
 </html>
