@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    font-family: "Modern Negra";
+
+}
+
+
+.section1{
+    background-color: black;
+    height: 100vh;
+}
+.section2{
+    background: radial-gradient(circle at center,#434343 0%,#000 50%,transparent 100%);
+    height: 100vh;
+    background-size: cover;
+}
+
+.heading {
+           
+    font-size: clamp(1.8rem,15vw,16rem);  
+    white-space: nowrap;      
+    line-height: 1;            
+    font-family: 'Modern Negra', serif; 
+    text-align: center;        
+    color: #505050;            
+    margin-bottom: 2rem;    
+ 
+    width: 100%; 
+    position: relative;
+  }
+  .top{
+    
+    width: 100%;
+    position: relative;
+  }
+  .image{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    height: 100vh;
+  }
+
+  .glass{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 230px;
+    width: 230px;
+    transform: translate(-50%,-50%);
+        width: 200px;
+        z-index: 1
+  }
+
+  .overlay{
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   gap: 60px;
+    position: absolute;
+    bottom: 12%;
+    
+    z-index: 2;
+  }
+
+  .con{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    color: white;
+    font-family: "Modern Negra", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+  }
+
+ .section3{
+    height: 100vh;
+    background-color: yellow;
+ }
+  
+ 
+  .con div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  @media (min-width: 768px) {
+    
+    .glass{
+        top: 130%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+
+    height: 500px;
+    width: 500px;
+    }
+    .overlay{
+        padding: 0 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 60px;
+        z-index: 2;
+    }
+  }
+  
