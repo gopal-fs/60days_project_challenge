@@ -1,0 +1,9 @@
+
+
+
+
+GET http://localhost:3000/
+###
+
+GET http://localhost:3000/gopal
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbnVyYWdAZ21haWwuY29tIiwiaWF0IjoxNzY4MjI4OTIwLCJleHAiOjE3NjgyMzI1MjB9.hbWZe2yLDOySyPdFBBOlw3oWH0SwdIufaSIEMJwqvEI
