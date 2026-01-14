@@ -63,7 +63,6 @@ body{
         width: 200px;
         z-index: 1
   }
-
   .overlay{
     padding: 0 20px;
     width: 100%;
@@ -76,7 +75,6 @@ body{
     
     z-index: 2;
   }
-
   .con{
     display: flex;
     flex-direction: column;
@@ -88,7 +86,6 @@ body{
     font-size: 16px;
 
   }
-
  .section3{
     height: 100vh;
     background-color: yellow;
@@ -100,17 +97,14 @@ body{
     align-items: center;
     gap: 5px;
   }
-
   @media (min-width: 768px) {
-    
     .glass{
         top: 130%;
         left: 50%;
         transform: translate(-50%,-50%);
         position: absolute;
-
-    height: 500px;
-    width: 500px;
+        height: 500px;
+        width: 500px;
     }
     .overlay{
         padding: 0 20px;
