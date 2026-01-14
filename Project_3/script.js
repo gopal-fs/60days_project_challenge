@@ -18,8 +18,6 @@ setInterval(function(){
     getExactMinutes<10?mins.textContent="0"+getExactMinutes:mins.textContent=getExactMinutes;
     getExactSeconds<10?secs.textContent="0"+getExactSeconds:secs.textContent=getExactSeconds;
     
-   
-    
     getExactSeconds++;
     if(getExactSeconds===60){
         getExactSeconds=0;
