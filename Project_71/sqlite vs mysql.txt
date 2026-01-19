@@ -1,0 +1,178 @@
+🔰 1. Database Nature (Core Difference)
+Aspect	SQLite	MySQL
+Type	Embedded DB	Client–Server DB
+Installation	Just a .db file	Server install cheyyali
+Use case	Local apps, testing	Production apps
+Concurrency	Limited	High (multiple users)
+
+👉 Interview line:
+
+SQLite = lightweight, MySQL = scalable production DB
+
+🧱 2. Data Types (Important Difference)
+SQLite
+
+Strict data types levu
+
+Dynamic typing
+
+CREATE TABLE users (
+  age TEXT
+);
+INSERT INTO users VALUES ('twenty');
+
+
+✔️ works
+
+MySQL
+
+Strict data types
+
+Validation strong
+
+CREATE TABLE users (
+  age INT
+);
+INSERT INTO users VALUES ('twenty');
+
+
+❌ ERROR
+
+👉 Job apps lo MySQL better (data integrity)
+
+🔑 3. AUTO INCREMENT
+SQLite
+id INTEGER PRIMARY KEY AUTOINCREMENT
+
+MySQL
+id INT PRIMARY KEY AUTO_INCREMENT
+
+
+⚠️ keyword change matrame, concept same
+
+🧠 4. IF NOT EXISTS
+SQLite
+CREATE TABLE IF NOT EXISTS users (...);
+
+MySQL
+CREATE TABLE IF NOT EXISTS users (...);
+
+
+✔️ same (easy migration)
+
+🧾 5. TEXT vs VARCHAR
+SQLite	MySQL
+TEXT	VARCHAR(255)
+Length ignore chestadi	Length enforce chestadi
+-- MySQL
+name VARCHAR(20)
+
+
+👉 MySQL lo length planning important
+
+🕒 6. DATE & TIME (BIG DIFFERENCE)
+SQLite
+SELECT date('now');
+SELECT datetime('now');
+
+MySQL
+SELECT CURDATE();
+SELECT NOW();
+
+
+👉 MySQL has richer date functions
+
+🔍 7. STRING FUNCTIONS
+SQLite
+SELECT LENGTH(name) FROM users;
+
+MySQL
+SELECT CHAR_LENGTH(name) FROM users;
+SELECT SUBSTRING(name,1,3);
+
+
+👉 MySQL lo functions ekkuva + powerful
+
+📊 8. AGGREGATES (Same mostly)
+SELECT COUNT(*), AVG(age), MAX(age) FROM users;
+
+
+✔️ SQLite & MySQL same
+
+🧠 9. JOINS (Same syntax)
+SELECT u.name, o.amount
+FROM users u
+JOIN orders o ON u.id = o.user_id;
+
+
+✔️ no difference (good news 😄)
+
+🚀 10. INDEXES (Production killer feature)
+SQLite
+CREATE INDEX idx_name ON users(name);
+
+MySQL
+CREATE INDEX idx_name ON users(name);
+
+
+⚠️ But MySQL index performance is WAY better
+
+🔐 11. USERS & PERMISSIONS ❌ (SQLite lo levu)
+MySQL only
+CREATE USER 'gopal'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT ON db.* TO 'gopal'@'localhost';
+
+
+👉 This is huge for real apps
+
+🧵 12. Transactions
+SQLite
+BEGIN;
+INSERT INTO users VALUES (...);
+COMMIT;
+
+MySQL
+START TRANSACTION;
+INSERT INTO users VALUES (...);
+COMMIT;
+
+
+✔️ concept same
+⚠️ MySQL supports better isolation levels
+
+⚡ 13. Performance & Scaling
+Feature	SQLite	MySQL
+Multiple users	❌	✅
+Large data	❌	✅
+Cloud deploy	❌	✅
+Backend APIs	❌	✅
+🧠 14. Stored Procedures ❌ (SQLite lo levu)
+MySQL only
+DELIMITER //
+CREATE PROCEDURE getUsers()
+BEGIN
+  SELECT * FROM users;
+END //
+
+
+👉 Advanced backend interviews lo important
+
+🧰 15. Tooling
+SQLite	MySQL
+DB Browser	MySQL Workbench
+CLI basic	CLI + Admin tools
+Testing	Production ready
+🎯 FINAL VERDICT (Straight talk ra)
+SQLite nerchukunna nuvvu already:
+
+✅ SQL basics
+✅ Joins
+✅ CRUD
+✅ Queries
+
+MySQL nerchukunte:
+
+🔥 Production skills
+🔥 Backend-ready
+🔥 Interview-ready
+🔥 Real-world DB

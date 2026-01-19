@@ -1,0 +1,304 @@
+✅ JavaScript Interview Concepts (2026 Complete List)
+🟢 1. JavaScript Basics (Must-know)
+
+What is JavaScript
+
+JS engine & runtime
+
+var, let, const
+
+Data types (primitive vs non-primitive)
+
+Type coercion (implicit & explicit)
+
+== vs ===
+
+Truthy & falsy values
+
+typeof, instanceof
+
+Operators (arithmetic, logical, ternary)
+
+🟢 2. Control Flow
+
+if, else, switch
+
+Loops (for, while, do-while)
+
+break, continue
+
+Short-circuiting (&&, ||)
+
+🟢 3. Functions (VERY IMPORTANT 🔥)
+
+Function declaration vs expression
+
+Arrow functions
+
+Parameters vs arguments
+
+Default parameters
+
+Rest parameters (...)
+
+Higher-order functions
+
+Callback functions
+
+IIFE
+
+Pure vs impure functions
+
+Function currying
+
+Function composition
+
+🟢 4. Scope & Hoisting
+
+Global, function, block scope
+
+Lexical scope
+
+Hoisting (var vs let vs const)
+
+Temporal Dead Zone (TDZ)
+
+Shadowing
+
+🟢 5. this Keyword (INTERVIEW FAVORITE 🔥)
+
+this in:
+
+normal function
+
+arrow function
+
+object method
+
+class
+
+event listeners
+
+call, apply, bind
+
+this in strict mode
+
+Common this pitfalls
+
+🟢 6. Objects & Arrays
+
+Object creation
+
+Dot vs bracket notation
+
+Object destructuring
+
+Array destructuring
+
+Spread operator (...)
+
+Object methods
+
+Array methods:
+
+map
+
+filter
+
+reduce
+
+find
+
+some, every
+
+Shallow vs deep copy
+
+🟢 7. Prototypes & Inheritance (CORE JS 🔥)
+
+Prototype chain
+
+__proto__ vs prototype
+
+Prototypal inheritance
+
+Constructor functions
+
+ES6 classes
+
+extends & super
+
+Method overriding
+
+🟢 8. Asynchronous JavaScript (VERY VERY IMPORTANT 🔥🔥)
+
+Synchronous vs asynchronous
+
+Call stack
+
+Web APIs
+
+Event loop
+
+Callback queue
+
+Microtask queue
+
+setTimeout, setInterval
+
+Promises
+
+then, catch, finally
+
+Promise chaining
+
+Promise.all, allSettled, race, any
+
+async / await
+
+Error handling in async code
+
+🟢 9. Browser & DOM
+
+DOM tree
+
+querySelector, getElementById
+
+Event bubbling & capturing
+
+Event delegation
+
+preventDefault, stopPropagation
+
+Forms & validation
+
+dataset
+
+classList
+
+localStorage, sessionStorage
+
+Cookies (basics)
+
+🟢 10. Fetch API & REST
+
+fetch() basics
+
+GET / POST / PUT / DELETE
+
+Headers & body
+
+JSON handling
+
+Error handling
+
+CORS (basics)
+
+REST principles
+
+HTTP status codes
+
+🟢 11. ES6+ Features (MANDATORY 2026)
+
+Arrow functions
+
+Template literals
+
+Destructuring
+
+Spread & rest
+
+Modules (import, export)
+
+Optional chaining (?.)
+
+Nullish coalescing (??)
+
+for...of vs for...in
+
+🟢 12. Error Handling
+
+try...catch
+
+Custom errors
+
+Error object
+
+Synchronous vs async errors
+
+🟢 13. Performance Concepts
+
+Debouncing
+
+Throttling
+
+Memory leaks
+
+Reflow & repaint
+
+IntersectionObserver
+
+Lazy loading
+
+Avoiding blocking JS
+
+🟢 14. Security Basics (Interview Level)
+
+XSS
+
+CSRF
+
+Same-origin policy
+
+Sanitizing inputs
+
+🟢 15. JavaScript in Real Projects
+
+Modular code
+
+Separation of concerns
+
+Clean code practices
+
+Reusability
+
+Scalability
+
+Folder structure
+
+🟢 16. Testing (Basic)
+
+Unit testing concept
+
+Jest basics
+
+Mocking (basic idea)
+
+🔥 17. Common Interview Traps
+
+typeof null
+
+NaN === NaN
+
+[] == []
+
+0.1 + 0.2
+
+Closure inside loop
+
+this confusion
+
+Promise execution order
+
+🟢 18. Coding Round Expectations
+
+String problems
+
+Array manipulation
+
+Object transformation
+
+Async problems
+
+DOM manipulation task
+
+Small CRUD app logic
