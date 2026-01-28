@@ -1,0 +1,150 @@
+🧱 SAMPLE COLLECTION (use this mentally)
+users
+{
+  _id: ObjectId("..."),
+  name: "Gopal",
+  age: 22,
+  role: "Student",
+  skills: ["SQL", "MongoDB", "JS"],
+  score: 85,
+  address: { city: "Hyderabad", pin: 500001 },
+  createdAt: ISODate("2024-01-10")
+}
+
+🟢 INSERT KEYWORDS
+insertOne
+db.users.insertOne({ name: "Gopal", age: 22 })
+
+insertMany
+db.users.insertMany([{ name: "A" }, { name: "B" }])
+
+🟢 FIND / WHERE (SQL WHERE)
+find (all)
+db.users.find()
+
+find with condition
+db.users.find({ age: 22 })
+
+comparison operators
+db.users.find({ age: { $gt: 20 } })
+
+Operator	Meaning
+$gt	>
+$gte	>=
+$lt	<
+$lte	<=
+$ne	!=
+$in	IN
+$nin	NOT IN
+db.users.find({ age: { $in: [21,22] } })
+
+🟢 LOGICAL OPERATORS
+db.users.find({ $and: [{ age: 22 }, { role: "Student" }] })
+
+db.users.find({ $or: [{ role: "Admin" }, { role: "Student" }] })
+
+db.users.find({ age: { $not: { $gt: 30 } } })
+
+🟢 PROJECTION (SELECT columns)
+db.users.find({}, { name: 1, age: 1, _id: 0 })
+
+🟢 SORT / LIMIT / SKIP
+db.users.find().sort({ age: -1 })
+
+db.users.find().limit(5)
+
+db.users.find().skip(5)
+
+🟢 UPDATE KEYWORDS
+updateOne
+db.users.updateOne({ name: "Gopal" }, { $set: { age: 23 } })
+
+updateMany
+db.users.updateMany({ role: "Student" }, { $set: { active: true } })
+
+$unset
+db.users.updateOne({ name: "Gopal" }, { $unset: { score: "" } })
+
+$inc
+db.users.updateOne({ name: "Gopal" }, { $inc: { score: 5 } })
+
+🟢 DELETE
+db.users.deleteOne({ name: "Gopal" })
+
+db.users.deleteMany({ role: "Student" })
+
+🟢 ARRAY OPERATORS 🔥
+$push
+db.users.updateOne({ name: "Gopal" }, { $push: { skills: "React" } })
+
+$pull
+db.users.updateOne({ name: "Gopal" }, { $pull: { skills: "JS" } })
+
+$addToSet (no duplicates)
+db.users.updateOne({ name: "Gopal" }, { $addToSet: { skills: "SQL" } })
+
+$elemMatch 🔥
+db.users.find({ skills: { $elemMatch: { $eq: "MongoDB" } } })
+
+🟢 EMBEDDED DOCUMENT
+db.users.find({ "address.city": "Hyderabad" })
+
+🟢 AGGREGATION PIPELINE (MOST IMPORTANT 🔥)
+aggregate = SQL GROUP BY
+db.users.aggregate([
+  { $group: { _id: "$role", total: { $sum: 1 } } }
+])
+
+WHERE → $match
+{ $match: { role: "Student" } }
+
+GROUP BY → $group
+{ $group: { _id: "$role", avgScore: { $avg: "$score" } } }
+
+HAVING → $match after $group
+[
+  { $group: { _id: "$role", avgScore: { $avg: "$score" } } },
+  { $match: { avgScore: { $gt: 80 } } }
+]
+
+SORT
+{ $sort: { avgScore: -1 } }
+
+PROJECT
+{ $project: { role: "$_id", avgScore: 1, _id: 0 } }
+
+🟢 COUNT
+db.users.countDocuments({ role: "Student" })
+
+🟢 DISTINCT
+db.users.distinct("role")
+
+🟢 EXISTS
+db.users.find({ score: { $exists: true } })
+
+🟢 REGEX (LIKE in SQL)
+db.users.find({ name: { $regex: "^Go" } })
+
+🟢 DATE QUERIES
+db.users.find({ createdAt: { $gte: ISODate("2024-01-01") } })
+
+🟢 INDEX
+db.users.createIndex({ email: 1 })
+
+🟢 TRANSACTIONS (ADVANCED)
+session.startTransaction()
+
+session.commitTransaction()
+
+session.abortTransaction()
+
+🧠 SQL → Mongo Mapping (VERY IMPORTANT)
+SQL	MongoDB
+SELECT	find
+WHERE	find / $match
+GROUP BY	$group
+HAVING	$match after $group
+ORDER BY	sort
+LIMIT	limit
+OFFSET	skip
+JOIN	$lookup
