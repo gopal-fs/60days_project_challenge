@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example2</title>
+</head>
+<body>
+
+<div id="data"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const data = params.get("data");
+
+document.getElementById("data").textContent = data;
+</script>
+
+</body>
+</html>
