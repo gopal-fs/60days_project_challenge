@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+}
+
+body{
+  margin: 0;
+  background-color: white;
+}
+
+.navbar{
+  display: flex;
+  height: 12vh;
+  border-bottom: 1px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.actions{
+  display: flex;
+  gap: 12px;
+}
+.actions button{
+  height: 32px;
+  width: 120px;
+  border-radius: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add{
+  height: 32px;
+  width: 120px;
+  border-radius: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.btns a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  
+}
+
+.main-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.main-con h1{
+    font-size: 70px;
+}
+
+.prod-con{
+  height: 88vh;
+  
+}
+
+.prod-con h1{
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.card{
+  border-radius: 15px;
+  border:1px solid gray;
+  width: 300px;
+  background-color: white;
+}
+
+.image{
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  
+}
+
+.con{
+  padding: 6px;
+  text-align: start;
+}
+
+
+.cart-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-data{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top:8px;
+  padding-bottom: 8px;
+  border-top: 1px solid #151312;
+  border-bottom: 1px solid #151312;
+}
